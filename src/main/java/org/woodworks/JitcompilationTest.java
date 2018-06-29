@@ -1,4 +1,3 @@
-
 package org.woodworks;
 
 import java.util.Random;
@@ -8,6 +7,7 @@ public class JitcompilationTest
 	private static int blackhole;
 	public static void main(String args[])
 	{
+		System.out.println(Runtime.getRuntime().availableProcessors());
 		int[] numbers = randoms(5_000);
 
 
@@ -16,7 +16,7 @@ public class JitcompilationTest
 			long start = System.nanoTime();
 			int result = sum(numbers);
 			long end = System.nanoTime();
-			System.out.printf("\t%d\t%d\n",result, end-start);
+			System.out.printf("\t%d\t%d\n",i, end-start);
 		}
 	}
 
